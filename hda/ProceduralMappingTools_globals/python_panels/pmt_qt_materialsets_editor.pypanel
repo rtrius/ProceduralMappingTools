@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pythonPanelDocument>
+  <!-- This file contains definitions of Python interfaces and the
+ interfaces menu.  It should not be hand-edited when it is being
+ used by the application.  Note, that two definitions of the
+ same interface or of the interfaces menu are not allowed
+ in a single file. -->
+  <interface name="pmt_materialsets_editor_vmf" label="pmt_materialsets_editor_vmf" icon="MISC_python" showNetworkNavigationBar="false" help_url="">
+    <script><![CDATA[def onCreateInterface():
+    pmt__global_config = hou.nodeType(hou.sopNodeTypeCategory(), "pmt::pmt__global_config").hdaModule()
+    window = pmt__global_config.pmt_qt_materialsets_editor.MaterialSetsEditorWindow("vmf")
+    return window]]></script>
+    <includeInToolbarMenu menu_position="104" create_separator="false"/>
+    <help><![CDATA[]]></help>
+  </interface>
+  <interface name="pmt_materialsets_editor_map" label="pmt_materialsets_editor_map" icon="MISC_python" showNetworkNavigationBar="false" help_url="">
+    <script><![CDATA[def onCreateInterface():
+    pmt__global_config = hou.nodeType(hou.sopNodeTypeCategory(), "pmt::pmt__global_config").hdaModule()
+    window = pmt__global_config.pmt_qt_materialsets_editor.MaterialSetsEditorWindow("map")
+    return window]]></script>
+    <includeInToolbarMenu menu_position="106" create_separator="false"/>
+    <help><![CDATA[]]></help>
+  </interface>
+  <interface name="pmt_materialsets_editor_t3d" label="pmt_materialsets_editor_t3d" icon="MISC_python" showNetworkNavigationBar="false" help_url="">
+    <script><![CDATA[def onCreateInterface():
+    pmt__global_config = hou.nodeType(hou.sopNodeTypeCategory(), "pmt::pmt__global_config").hdaModule()
+    window = pmt__global_config.pmt_qt_materialsets_editor.MaterialSetsEditorWindow("t3d")
+    return window]]></script>
+    <includeInToolbarMenu menu_position="105" create_separator="false"/>
+    <help><![CDATA[]]></help>
+  </interface>
+</pythonPanelDocument>

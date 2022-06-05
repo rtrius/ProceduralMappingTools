@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pythonPanelDocument>
+  <!-- This file contains definitions of Python interfaces and the
+ interfaces menu.  It should not be hand-edited when it is being
+ used by the application.  Note, that two definitions of the
+ same interface or of the interfaces menu are not allowed
+ in a single file. -->
+  <interface name="pmt_entity_kv_editor_vmf" label="pmt_entity_kv_editor_vmf" icon="MISC_python" showNetworkNavigationBar="false" help_url="">
+    <script><![CDATA[#Python panel init for when this is used as a python module in pmt::pmt__global_config
+window = None
+def onCreateInterface():
+        pane_tab = kwargs["paneTab"]
+        pmt__global_config = hou.nodeType(hou.sopNodeTypeCategory(), "pmt::pmt__global_config").hdaModule()
+        global window
+        window = pmt__global_config.pmt_qt_entity_kv_editor.EntityKvEditorWindow(pane_tab, "vmf")
+        return window   
+def onNodePathChanged(node):
+        if window != None: window.OnNodePathChanged(node)]]></script>
+    <includeInToolbarMenu menu_position="1112" create_separator="false"/>
+    <help><![CDATA[]]></help>
+  </interface>
+  <interface name="pmt_entity_kv_editor_t3d" label="pmt_entity_kv_editor_t3d" icon="MISC_python" showNetworkNavigationBar="false" help_url="">
+    <script><![CDATA[window = None
+def onCreateInterface():
+        pane_tab = kwargs["paneTab"]
+        pmt__global_config = hou.nodeType(hou.sopNodeTypeCategory(), "pmt::pmt__global_config").hdaModule()
+        global window
+        window = pmt__global_config.pmt_qt_entity_kv_editor.EntityKvEditorWindow(pane_tab, "t3d")
+        return window   
+def onNodePathChanged(node):
+        if window != None: window.OnNodePathChanged(node)]]></script>
+    <includeInToolbarMenu menu_position="1113" create_separator="false"/>
+    <help><![CDATA[]]></help>
+  </interface>
+  <interface name="pmt_entity_kv_editor_map" label="pmt_entity_kv_editor_map" icon="MISC_python" showNetworkNavigationBar="false" help_url="">
+    <script><![CDATA[window = None
+def onCreateInterface():
+        pane_tab = kwargs["paneTab"]
+        pmt__global_config = hou.nodeType(hou.sopNodeTypeCategory(), "pmt::pmt__global_config").hdaModule()
+        global window
+        window = pmt__global_config.pmt_qt_entity_kv_editor.EntityKvEditorWindow(pane_tab, "map")
+        return window   
+def onNodePathChanged(node):
+        if window != None: window.OnNodePathChanged(node)]]></script>
+    <includeInToolbarMenu menu_position="1114" create_separator="false"/>
+    <help><![CDATA[]]></help>
+  </interface>
+</pythonPanelDocument>
