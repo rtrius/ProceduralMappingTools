@@ -585,6 +585,6 @@ else:
 	if IS_PYTHON_NODE:
 		geo = node.geometry()
 		
-		map_path = "C:/pmt_resources/exports/out.map"
+		map_path = "C:/pmt/exports/out.map"
 		entity_list = parse_map(map_path)
 		import_map(geo, entity_list)

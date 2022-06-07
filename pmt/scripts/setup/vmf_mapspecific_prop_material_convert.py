@@ -4,11 +4,11 @@
 # in general, this means converting .vmt materials from "LightmappedGeneric" to "VertexLitGeneric".
 #
 # For setup run 'vmf_mapspecific_prop_material_convert.py -d'.
-# This script should be run from 'C:/pmt_resources/scripts/setup/';
-# the current working directory must be 'C:/pmt_resources/scripts/setup/'.
+# This script should be run from 'C:/pmt/scripts/setup/';
+# the current working directory must be 'C:/pmt/scripts/setup/'.
 #
 # Running this script will duplicate .vmt files and place them in search_path/_msp/.
-# By default the path will be C:/pmt_resources/materials/vmf/materials/_msp/. The '_msp'
+# By default the path will be C:/pmt/materials/vmf/materials/_msp/. The '_msp'
 # folder must be copied to the Source project directory afterwards, if map-specific props are used.
 
 DEFAULT_SEARCH_PATH = "../../materials/vmf/materials"
@@ -295,7 +295,7 @@ if __name__ == "__main__":
 			(cwd, first_folder) = os.path.split(cwd)
 			(cwd, second_folder) = os.path.split(cwd)
 			if first_folder.lower() != "setup" or second_folder.lower() != "scripts":
-				print("When using -d, this script must be run from /pmt_resources/scripts/setup/.")
+				print("When using -d, this script must be run from /pmt/scripts/setup/.")
 				exit()
 			search_path = DEFAULT_SEARCH_PATH
 		

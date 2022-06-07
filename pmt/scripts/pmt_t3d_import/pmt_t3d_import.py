@@ -465,7 +465,7 @@ else:
 	node = hou.pwd()
 	IS_PYTHON_NODE = node != None and "python" in node.type().nameWithCategory().lower() #'Sop/python' in Houdini 18.5
 	if IS_PYTHON_NODE:
-		t3d_path = "C:/pmt_resources/exports/out.t3d"
+		t3d_path = "C:/pmt/exports/out.t3d"
 		
 		geo = node.geometry()
 		actors = parse_t3d(t3d_path)

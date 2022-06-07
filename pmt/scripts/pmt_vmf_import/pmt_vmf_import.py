@@ -425,6 +425,6 @@ else:
 	if IS_PYTHON_NODE:
 		geo = node.geometry()
 		
-		vmf_path = "C:/pmt_resources/exports/out.vmf"
+		vmf_path = "C:/pmt/exports/out.vmf"
 		vmf_dict = parse_vmf(vmf_path)
 		import_vmf(geo, vmf_dict)

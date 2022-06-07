@@ -13,6 +13,10 @@
 /pmt/textures/**
 
 #
+*.hip
+*.hiplc
+
+#
 *.pyc
 
 #tex

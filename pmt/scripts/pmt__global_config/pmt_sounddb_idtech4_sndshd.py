@@ -295,7 +295,7 @@ class MapSounddb:
 
 		
 #Converts between idtech4 and filesystem paths:
-#filesystem: C:/pmt_resources/textures/map/textures/folder/texture.png
+#filesystem: C:/pmt/textures/map/textures/folder/texture.png
 #   idtech4: /textures/folder/texture
 def convert_fs_to_idtech4_path(fs_path, map_textures_path, extension = ".png"):
 	idtech4_path = fs_path[len(map_textures_path):-len(extension)]

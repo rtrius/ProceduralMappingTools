@@ -65,12 +65,12 @@ def make_unreal_path_from_fs_path(filesystem_path, t3d_base_path, assettype = "T
 		#a texture with unreal_path:
 		#	PACKAGE.FOLDER.texture
 		#might have an filesystem path:
-		#	C:\pmt_resources\textures\t3d\PACKAGE\Textures\FOLDER\texture.bmp
+		#	C:\pmt\textures\t3d\PACKAGE\Textures\FOLDER\texture.bmp
 		#with t3d_base_path:#
-		#	C:\pmt_resources\textures\t3d
+		#	C:\pmt\textures\t3d
 		assettype = assettype.lower()
 		
-		#removes 'C:\pmt_resources\textures\t3d'
+		#removes 'C:\pmt\textures\t3d'
 		#leaving '\PACKAGE\Textures\FOLDER\texture.bmp'
 		unreal_path = filesystem_path[len(t3d_base_path):].lower()
 		

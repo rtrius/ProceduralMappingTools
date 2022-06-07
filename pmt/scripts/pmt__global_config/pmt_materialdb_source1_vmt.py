@@ -118,7 +118,7 @@ class MaterialsVmt:
 		return self.fs_diffuse_to_dimensions[absolute_diffuse_path]
 		
 #Converts between source and filesystem paths:
-#filesystem: C:/pmt_resources/textures/vmf/materials/folder/texture.png
+#filesystem: C:/pmt/textures/vmf/materials/folder/texture.png
 #    source: folder/texture
 def convert_fs_to_source_path(fs_path, vmf_textures_path, extension = ".png"):
 	source_path = fs_path[len(vmf_textures_path):-len(extension)]

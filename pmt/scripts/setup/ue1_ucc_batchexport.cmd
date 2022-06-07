@@ -1,12 +1,12 @@
 @echo off
 rem Batchscript to export data for PMT
 rem
-rem This script exports Unreal Engine 1 textures, sounds, and class definitions to C:\pmt_resources.
+rem This script exports Unreal Engine 1 textures, sounds, and class definitions to C:\pmt.
 rem 
 rem Copy this script to the root UE1 directory(containing /System/) before running it.
 rem Tested with Unreal227i / UnrealTournament469b - other versions have issues with exporting.
 
-set EXPORT_DIR=C:\pmt_resources
+set EXPORT_DIR=C:\pmt
 
 @echo on
 for /R %%F in (textures\*.utx) do mkdir %EXPORT_DIR%\textures\t3d\%%~nF\textures

@@ -455,7 +455,7 @@ def vmf_sounds_to_treeitems():
 	#
 	#Additionally, it is worth noting that a 'raw' path has to be handled in multiple ways.
 	#The actual filesystem path (used for sound preview):
-	#	C:/pmt_resources/sounds/vmf/sound/FOLDER/a.wav
+	#	C:/pmt/sounds/vmf/sound/FOLDER/a.wav
 	#relative path to vmf_sounds_path (used by the tree, to select which sound to use): 
 	#	sound/FOLDER/a.wav
 	#relative to sound/ (the path that is stored in the .vmf file and in vmf_keyvalues): 
@@ -950,7 +950,7 @@ class AssetWidget(QtWidgets.QWidget):
 							message = QtWidgets.QMessageBox(QtWidgets.QMessageBox.Warning, "sound_preview", "File not found: {} (sndshd={})".format(map_fs_sound_path, sndshd), QtWidgets.QMessageBox.Ok, self)
 							message.show()
 			if qurl != None:	
-				#QUrl() is in the format "C:/pmt_resources/sounds/engine/sound.wav"
+				#QUrl() is in the format "C:/pmt/sounds/engine/sound.wav"
 				self.mediaplayer.setMedia(qurl)
 				self.mediaplayer.play()
 			

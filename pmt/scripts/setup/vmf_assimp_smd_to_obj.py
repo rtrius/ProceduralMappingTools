@@ -2,8 +2,8 @@
 # vmf_assimp_smd_to_obj.py - uses assimp.exe to convert .smd to .obj
 #
 # For setup run 'vmf_assimp_smd_to_obj.py -d'.
-# This script should be run from 'C:/pmt_resources/scripts/setup/';
-# the current working directory must be 'C:/pmt_resources/scripts/setup/'.
+# This script should be run from 'C:/pmt/scripts/setup/';
+# the current working directory must be 'C:/pmt/scripts/setup/'.
 #
 # search_path is in format C:\dir
 
@@ -28,7 +28,7 @@ if __name__ == '__main__':
 			(cwd, first_folder) = os.path.split(cwd)
 			(cwd, second_folder) = os.path.split(cwd)
 			if first_folder.lower() != "setup" or second_folder.lower() != "scripts":
-				print("When using -d, this script must be run from /pmt_resources/scripts/setup/.")
+				print("When using -d, this script must be run from /pmt/scripts/setup/.")
 				exit()
 			search_path = DEFAULT_SEARCH_PATH
 	
